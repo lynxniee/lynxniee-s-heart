@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lynxniee hihi</title>
+    <title>lynxniee hihi </title>
     <style>
         body {
             margin: 0;
@@ -41,7 +41,7 @@
 <body>
 
     <!-- Video Lặp Lại -->
-    <video autoplay muted loop>
+    <video id="background-video" autoplay muted loop playsinline>
         <source src="tim.mp4" type="video/mp4">
         Trình duyệt của bạn không hỗ trợ video.
     </video>
@@ -56,10 +56,16 @@
     <button id="play-button" onclick="playMusic()">Bật Nhạc</button>
 
     <script>
+        // Hàm playMusic để bắt đầu phát nhạc và video trên các thiết bị di động
         function playMusic() {
             const music = document.getElementById('background-music');
-            music.play(); // Bắt đầu phát nhạc
-            document.getElementById('play-button').style.display = 'none'; // Ẩn nút sau khi nhấn
+            const video = document.getElementById('background-video');
+            
+            // Phát nhạc
+            music.play(); 
+
+            // Ẩn nút play sau khi nhấn
+            document.getElementById('play-button').style.display = 'none'; 
         }
     </script>
 
